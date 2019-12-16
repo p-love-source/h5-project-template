@@ -1,0 +1,43 @@
+@import './reset.less';
+@import './variable.less';
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+html body {
+  max-width: 1024PX; // 大写的PX不会被自动转换为rem单位
+  min-width: 320PX;
+  margin: 0 auto;
+}
+
+#nprogress .bar {
+  height: 1px !important;
+  background-color: @vantBlue !important;
+}
+
+// 单行溢出隐藏
+.one-txt-cut {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 两行溢出隐藏
+.two-txt-cut {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+// 隐藏滚动条
+::-webkit-scrollbar {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
